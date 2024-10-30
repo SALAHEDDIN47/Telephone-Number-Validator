@@ -1,3 +1,21 @@
+:root {
+    --white: #fff;
+    --light-grey: #f5f6f7;
+    --dark-grey: #0a0a23;
+    --yellow: #f1be32;
+    --golden-yellow: #feac32;
+    --light-red:rgb(235, 129, 129);
+    --dark-red:rgb(117, 0, 0);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 body {
     background-color: grey;
 }
@@ -5,4 +23,9 @@ body {
 img {
     height: 100px;
     width: 500px;
+}
+
+.container {
+    display: flex;
+
 }
