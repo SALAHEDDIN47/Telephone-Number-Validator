@@ -64,9 +64,9 @@ h1 {
     gap: 10px;
     background-color: #f5f6f7;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;
-    justify-content: center;
+    justify-content: center; /* Centers items horizontally */
+    align-items: flex-start; /* Aligns items to the top */
+    flex-direction: column;;
     border-radius: 5px;
 }
 
@@ -75,7 +75,7 @@ h1 {
     width:250px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center; /*nothing new but I need to commit some thing*/
     justify-content:space-between;
     gap: 10px;
 }
@@ -89,6 +89,7 @@ h1 {
 }
 
 button {
+    font-size: medium ;
     margin: auto 0;
     height: 40px;
     width: 80px;
