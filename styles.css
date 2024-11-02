@@ -63,9 +63,9 @@ h1 {
     width: 250px;
     gap: 10px;
     background-color: #f5f6f7;
-    display: flex;
+    display: grid;
     justify-content: center; /* Centers items horizontally */
-    align-items: flex-start; /* Aligns items to the top */
+    align-items: start; /* Aligns items to the top */
     flex-direction: column;;
     border-radius: 5px;
 }
