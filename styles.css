@@ -101,3 +101,11 @@ input {
     height: 30px;
     width: 200px;
 }
+
+.hidden {
+    display: none;
+  }
+  .result-div {
+    margin-top: 10px;
+    font-weight: bold;
+  }
