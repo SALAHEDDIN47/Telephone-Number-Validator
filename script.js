@@ -2,15 +2,22 @@
 const phoneInput = document.getElementById('user-input');
 const checkButton = document.getElementById('check-btn');
 const clearButton = document.getElementById('clear-btn');
-const resultDisplay = document.getElementById('result-div');
+const resultDisplay = document.getElementById('results-div');
 
-// Regex for valid US phone number (basic example)
-const usPhoneRegex = /^(?:\+1\s?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/;
+// Updated regex for valid US phone number formats
+const usPhoneRegex = /^(?:1\s*|1?\+)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/;
 
-// Check button click event
-checkButton.addEventListener('click', () => {
+// Function to check and display the result
+function checkPhoneNumber() {
   const phoneNumber = phoneInput.value.trim();
   
+  // Check if the input is empty
+  if (phoneNumber === '') {
+    resultDisplay.textContent = "Please provide a phone number";
+    resultDisplay.classList.remove('hidden'); // Show the message
+    return; // Stop further execution of the function
+  }
+
   // Check if the phone number matches US format
   const resultText = usPhoneRegex.test(phoneNumber)
     ? `Valid US number: ${phoneNumber}`
@@ -28,7 +35,10 @@ checkButton.addEventListener('click', () => {
 
   // Clear the input field for a new entry
   phoneInput.value = '';
-});
+}
+
+// Check button click event
+checkButton.addEventListener('click', checkPhoneNumber);
 
 // Clear button click event
 clearButton.addEventListener('click', () => {
@@ -39,7 +49,7 @@ clearButton.addEventListener('click', () => {
 
 // Trigger checkPhoneNumber on "Enter" key press
 phoneInput.addEventListener('keypress', (event) => {
-    if (event.key === 'Enter') {
-      checkPhoneNumber();
-    }
-  });
+  if (event.key === 'Enter') {
+    checkPhoneNumber();
+  }
+});
