@@ -63,10 +63,11 @@ h1 {
     width: 250px;
     gap: 10px;
     background-color: #f5f6f7;
-    display: grid;
-    justify-content: center; /* Centers items horizontally */
-    align-items: start; /* Aligns items to the top */
-    flex-direction: column;;
+    display: flex;
+    flex-direction: column; /* Stacks label and input vertically */
+    align-items: center; /* Centers label and input horizontally */
+    justify-content: flex-start; /* Aligns items to the top of the div */
+    height: 100vh;
     border-radius: 5px;
 }
 
@@ -93,4 +94,10 @@ button {
     margin: auto 0;
     height: 40px;
     width: 80px;
+    margin-bottom: 15px;
+}
+
+input {
+    height: 30px;
+    width: 200px;
 }
