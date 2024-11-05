@@ -97,15 +97,19 @@ button {
     margin-bottom: 15px;
 }
 
-input {
-    height: 30px;
-    width: 200px;
-}
-
 .hidden {
     display: none;
   }
+  
   .result-div {
     margin-top: 10px;
     font-weight: bold;
+    font-size: 1.2em; /* Increase the size of the result text */
+  }
+  
+  input[type="text"] {
+    width: 200px; /* Increase width of input */
+    height: 40px; /* Increase height of input */
+    font-size: 1em; /* Increase font size within input */
+    text-align: center; /* Center the cursor */
   }
